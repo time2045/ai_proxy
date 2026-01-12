@@ -70,7 +70,7 @@ upstreams:
     base_url: "https://integrate.api.nvidia.com"
     models: ["deepseek-ai/deepseek-r1", "minimaxai/minimax-m2.1", "deepseek-ai/deepseek-v3.2"]
     keys:
-      - "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"
+      - "nvapi-xxx"
 
 project_auth:
   # 项目授权配置 1
