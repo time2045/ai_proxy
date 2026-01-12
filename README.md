@@ -727,3 +727,7 @@ docker rm ai_proxy
 - 支持模型自动映射
 - 支持配置热加载
 - 支持失败重试和冷却机制
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=time2045/ai_proxy&type=date&legend=top-left)](https://www.star-history.com/#time2045/ai_proxy&type=date&legend=top-left)
