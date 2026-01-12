@@ -1,0 +1,41 @@
+server:
+  port: ":8080"
+  notification_webhook: ""
+  max_retries: 3
+  cool_down_minutes: 10
+  auto_models:
+    "auto-models": "nvidia:minimaxai/minimax-m2.1" 
+    "auto-gemini": "nvidia:deepseek-ai/deepseek-r1" 
+
+upstreams:
+  - name: "OpenAI-Pool"
+    base_url: "https://api.openai.com"
+    models: ["gpt-4", "gpt-4-turbo", "gpt-3.5-turbo"]
+    keys:
+      - "sk-oa-1"
+      - "sk-oa-2"
+
+  - name: "DeepSeek-Pool"
+    base_url: "https://api.deepseek.com"
+    models: ["deepseek-chat", "deepseek-coder"]
+    keys:
+      - "sk-ds-1"
+
+  - name: "Gemini"
+    base_url: "https://generativelanguage.googleapis.com"
+    models: ["gemini-pro", "gemini-1.5-flash"]
+    keys:
+      - "sk-gm-1"
+  - name: "nvidia"
+    base_url: "https://integrate.api.nvidia.com"
+    models: ["deepseek-ai/deepseek-r1", "minimaxai/minimax-m2.1", "deepseek-ai/deepseek-v3.2"]
+    keys:
+      - "nvapi-xxx"
+
+project_auth:
+  - project_name: "Marketing-App"
+    api_key: "ak-mkt-123456"
+    allowed_models: ["gpt-4", "gpt-3.5-turbo"]
+  - project_name: "测试项目"
+    api_key: "ak-cs-7890121"
+    allowed_models: ["*"] # 允许所有模型
